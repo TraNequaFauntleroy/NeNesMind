@@ -52,7 +52,7 @@ function guessNumbers() {
         let g3 = play(3)
 
         if (g1 && g2 && g3 && g0) {
-            alert("Yayy! You Won the Game")
+            alert(url("https://media2.giphy.com/media/ely3apij36BJhoZ234/giphy.gif?cid=ecf05e47fck6uqgkudcu1zgsvdw1z0mbm35ili87ywj6d4dz&rid=giphy.gif&ct=g"))
         }
     }
 }
