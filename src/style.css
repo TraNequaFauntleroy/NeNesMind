@@ -1,7 +1,5 @@
-
-
 html {
-    background: url(background-img.png);
+    background: url(./background-img.png);
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     height: 100vh
