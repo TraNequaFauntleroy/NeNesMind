@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "start": "parcel index.html --open",
+        "build": "parcel build index.html"
+    },
+    "dependencies": {
+        "axios": "^0.24.0",
+        "vanilla-framework": "^2.37.0"
+    },
+    "devDependencies": {
+        "parcel-bundler": "^1.12.5"
+    }
+}
