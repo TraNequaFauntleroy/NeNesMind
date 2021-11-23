@@ -3,6 +3,7 @@
 # How To Run Project
 - Clone the repo to your machine
 - Select the folder named "NeNe's Mind"
+- Open the '"Src" folder
 - Click "index.html"
 - Enter the mind of NeNe
 
