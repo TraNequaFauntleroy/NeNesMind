@@ -61,8 +61,9 @@ function play(guess) {
     const guessSlot = guessIndex[`guess${guess}`]
     if (!guessSlot.success) {
         const msg1 = document.getElementById(`message1-${guess}`)
-        const msg2 = document.getElementById(`message2-${guess}`)
-        const msg3 = document.getElementById(`message3-${guess}`)
+        const msg2 = document.getElementById("message2")
+        const msg3 = document.getElementById("message3")
+
         const user = Number(document.getElementById(`guess-${guess}`).value)
     
         if (user < 1 || user > 8) {
@@ -81,8 +82,7 @@ function play(guess) {
                 msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses}`
 
             } else if (user == numbers[guess]) {
-                msg1.textContent = "You got this one!"
-                // msg3.textContent = `You guessed it in ${guessCount} guesses.`
+                msg1.textContent = "🔒";
                 guessSlot.success = true
             } 
         }
