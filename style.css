@@ -1,7 +1,6 @@
 
 
 html {
-    /* background-color: #f5be49; */
     background: url(background-img.png);
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
@@ -34,6 +33,7 @@ h1 {
  
 h3 {
     font-style: italic;
+    font-weight: bold;
 }
 
 button {
