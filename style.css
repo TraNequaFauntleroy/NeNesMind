@@ -1,17 +1,17 @@
 
 
 html {
-    background-color: #f5be49;
-    /* background: url("https://images.unsplash.com/photo-1568145675395-66a2eda0c6d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2835&q=80"); */
+    /* background-color: #f5be49; */
+    background: url(background-img.png);
     background-size: cover;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100vh
 }
 
 .main-container {
     background-color: white;
     text-align: center;
-    margin: 5% auto;
+    margin: 3% auto;
     width: 60%;
     border-radius: 5px 5px 25px 25px;
     border: 3px solid black;
@@ -24,9 +24,17 @@ html {
 
 .icons {
     text-align: left;
-    width: 15%;
     margin-left: 2%;
- }
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+}
+ 
+h3 {
+    font-style: italic;
+}
 
 button {
     display: block;
@@ -50,10 +58,6 @@ input {
     background-color: rgba(116, 113, 113, 0.351);
 }
 
-
 .guess-box {
     display: inline-block
-}
-.simple-keyboard {
-    max-width: none;
 }
