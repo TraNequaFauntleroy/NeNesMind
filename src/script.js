@@ -43,7 +43,7 @@ let guessIndex = {
 function guessNumbers() {
     guessCount += 1
     if (guessCount == 10) {
-        alert("No More Guesses Available")
+        swal("Sorry,", "No more guesses available!", "error");
 
     } else {
         let g0 = play(0) 
@@ -52,7 +52,7 @@ function guessNumbers() {
         let g3 = play(3)
 
         if (g1 && g2 && g3 && g0) {
-            alert(url("https://media2.giphy.com/media/ely3apij36BJhoZ234/giphy.gif?cid=ecf05e47fck6uqgkudcu1zgsvdw1z0mbm35ili87ywj6d4dz&rid=giphy.gif&ct=g"))
+            swal("Great Work!", "You Won The Game!", "success");
         }
     }
 }
@@ -67,19 +67,19 @@ function play(guess) {
         const user = Number(document.getElementById(`guess-${guess}`).value)
     
         if (user < 1 || user > 8) {
-            alert("Please enter a number between 1 and 8.")
+            swal("Hold on!", "Please enter a number 1 through 8", "warning");
         } else {
             guessSlot.guesses.push(user)
 
             if (user < numbers[guess]) {
                 msg1.textContent = "Too low!"
                 msg2.textContent = `Number of guesses: ${guessCount}`
-                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses}`
+                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses }`
 
             } else if (user > numbers[guess]) {
                 msg1.textContent = "Too high!"
                 msg2.textContent = `Number of guesses: ${guessCount}`
-                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses}`
+                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses }`
 
             } else if (user == numbers[guess]) {
                 msg1.textContent = "🔒";
