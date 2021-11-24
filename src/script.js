@@ -17,7 +17,6 @@ axios.get(computer.url)
     console.log(error);
   })
   .then(function () {
-    // always executed
   })
 
 let guessCount = 0
