@@ -39,6 +39,38 @@ let guessIndex = {
     }
 }
 
+function play(guess) {
+    const guessSlot = guessIndex[`guess${guess}`]
+    if (!guessSlot.success) {
+        const msg1 = document.getElementById(`message1-${guess}`)
+        const msg2 = document.getElementById("message2")
+        const msg3 = document.getElementById("message3")
+        const user = Number(document.getElementById(`guess-${guess}`).value)
+    
+        if (user < 1 || user > 8) {
+            swal("Hold on!", "Please enter a number 1 through 8", "warning");
+        } else {
+            guessSlot.guesses.push(user)
+
+            if (user < numbers[guess]) {
+                msg1.textContent = "Too low!"
+                msg2.textContent = `Number of guesses: ${guessCount}`
+                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses}`
+
+            } else if (user > numbers[guess]) {
+                msg1.textContent = "Too high!"
+                msg2.textContent = `Number of guesses: ${guessCount}`
+                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses}`
+
+            } else if (user == numbers[guess]) {
+                msg1.textContent = "🔒";
+                guessSlot.success = true
+            } 
+        }
+    }
+    return guessSlot.success
+}
+
 function guessNumbers() {
     guessCount += 1
     if (guessCount == 10) {
@@ -50,41 +82,8 @@ function guessNumbers() {
         let g2 = play(2)
         let g3 = play(3)
 
-        if (g1 && g2 && g3 && g0) {
+        if (g0 && g1 && g2 && g3) {
             swal("Great Work!", "You Won The Game!", "success");
         }
     }
-}
-
-function play(guess) {
-    const guessSlot = guessIndex[`guess${guess}`]
-    if (!guessSlot.success) {
-        const msg1 = document.getElementById(`message1-${guess}`)
-        const msg2 = document.getElementById("message2")
-        const msg3 = document.getElementById("message3")
-
-        const user = Number(document.getElementById(`guess-${guess}`).value)
-    
-        if (user < 1 || user > 8) {
-            swal("Hold on!", "Please enter a number 1 through 8", "warning");
-        } else {
-            guessSlot.guesses.push(user)
-
-            if (user < numbers[guess]) {
-                msg1.textContent = "Too low!"
-                msg2.textContent = `Number of guesses: ${guessCount}`
-                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses }`
-
-            } else if (user > numbers[guess]) {
-                msg1.textContent = "Too high!"
-                msg2.textContent = `Number of guesses: ${guessCount}`
-                msg3.textContent = `Guessed Numbers are: ${guessSlot.guesses }`
-
-            } else if (user == numbers[guess]) {
-                msg1.textContent = "🔒";
-                guessSlot.success = true
-            } 
-        }
-    }
-    return guessSlot.success
 }
