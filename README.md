@@ -39,3 +39,11 @@ When the page loads, NeNe's Mind will generate a random 4-digit number. It is YO
 
 
 * The code was tested many times. I love to test my code (or see what my code is doing) after 3 lines of code. I like to write bite sized pieces of code to make debugging easier. It's much easier to find mistakes in 3 lines of code rather than 300 lines. I can't even imagine why one would torture themselves in such a way.
+
+CHANGES (initial thought dump)
+- Take away 4 input boxes and use only one
+- Convert the user's answer (4 digit number) into an array
+- Since the computer's response is also an array, we can just compare the values at each index- only iterating through each array one time per guess
+- If the values match, a message pops up to say 'You have matched n Numbers' n = the number of matches and increment matchCount
+- If not, just increment the guessCount and add the number to the numbersGuessed array and display it
+- Once the arrays match, a popup appears letting the user know they won

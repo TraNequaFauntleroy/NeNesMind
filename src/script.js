@@ -6,17 +6,15 @@ let computer = {
 let numbers = []
 
 axios.get(computer.url)
-  .then(function (response) {
+  .then(response => {
     for (let data of response.data.split("\n")) {
         if (data.length > 0) {
             numbers.push(Number(data))
         }
     }
   })
-  .catch(function (error) {
+  .catch(error => {
     console.log(error);
-  })
-  .then(function () {
   })
 
 let guessCount = 0
