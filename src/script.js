@@ -1,22 +1,20 @@
 let computer = {
     method: 'GET',
-    url: 'https://www.random.org/integers/?num=4&min=1&max=8&col=1&base=10&format=plain&rnd=newn',
+    url: 'https://www.random.org/integers/?num=4&min=0&max=8&col=1&base=10&format=plain&rnd=newn',
 }
 
 let numbers = []
 
 axios.get(computer.url)
-  .then(function (response) {
+  .then(response => {
     for (let data of response.data.split("\n")) {
         if (data.length > 0) {
             numbers.push(Number(data))
         }
     }
   })
-  .catch(function (error) {
+  .catch(error => {
     console.log(error);
-  })
-  .then(function () {
   })
 
 let guessCount = 0
