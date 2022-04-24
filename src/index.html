@@ -29,30 +29,15 @@
             <h3>Can you guess it?</h3>
 
             <div class="guess-box">
-                <input class="input" placeholder="?" id="guess-0" />
-                <p id="message1-0"> </p>
+                <input class="input" placeholder="?" id="guess" />
             </div>
 
-            <div class="guess-box">
-                <input class="input" placeholder="?" id="guess-1"/>
-                <p id="message1-1"> </p>
-            </div>
-
-            <div class="guess-box">
-                <input class="input" placeholder="?" id="guess-2"/>
-                <p id="message1-2"> </p>
-            </div>
-
-            <div class="guess-box">
-                <input class="input" placeholder="?" id="guess-3"/>
-                <p id="message1-3"> </p>
-            </div>
-
-            <button onclick="guessNumbers()">GUESS</button>
+            <button onclick="guessingGame()">GUESS</button>
             
-            <div class="messages">
-                <p id="message2">Number of Guesses: 0</p>
-                <p id="message3"> </p>
+            <div class="feedback">
+                <p id="guessCounter"></p>
+                <p id="guessedNums"></p>
+                <p id="matchCounter"></p>
             </div>
 
         </div>
@@ -60,7 +45,8 @@
     <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./app.js"></script>
    
 </body>
 </html>

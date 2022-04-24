@@ -1,6 +1,6 @@
 let computer = {
     method: 'GET',
-    url: 'https://www.random.org/integers/?num=4&min=1&max=8&col=1&base=10&format=plain&rnd=newn',
+    url: 'https://www.random.org/integers/?num=4&min=0&max=8&col=1&base=10&format=plain&rnd=newn',
 }
 
 let numbers = []
