@@ -31,21 +31,27 @@ const play = () => {
             swal("Hold on!", "Please enter 4 digits", "warning");
         } else {
             guessHistory.push(document.getElementById('guess').value)
+
+            const matches = user.reduce((prev, curr, i) => {
+                if((curr === computer[i] || computer.includes(curr))){
+                    return [...prev, curr] //copy of the matches array, adding the curr(user)
+                }
+                return prev //if no matches are found, return previous match array
+            },[]) // to set the type of DS we want to return
+            console.log('matches:', matches)
+            matchCount = matches.length
             
-            for (let i = 0; i < user.length; i++) {
-                console.log(user[i], computer[i])
-                    if (user[i] === computer[i]) {
-                        // // matchCount += 1
-                        // console.log('match count:', matchCount)
-                    } else {
-                        pass
-                        // here I want to just scan the arrays and see if there are matching values
-                        // if so, display the matchCount here 
-                    }
-            }
+           if(
+               matchCount === 4 && 
+               matches.toString() === 
+               computer.toString()
+               ){
+                swal("Congrats!", "You Win!", "success");                
+               }
+
             guessCounter.textContent = `You have ${guessCount} guesses left!`
             matchCounter.textContent = `You matched ${matchCount} digits.`
-            guessedNums.textContent = `Guessed numbers are: ${guessHistory}` 
+            guessedNums.textContent = `Guessed numbers are: ${guessHistory.join(', ')}` 
         }
     }
     
@@ -56,10 +62,7 @@ const guessingGame = () => {
     if (guessCount == 0) {
         swal("Sorry,", "No more guesses available!", "error");
     } else {
-        let userGuess = play() 
-        if (matchCount == 4) {
-            swal("Great Work!", "You Won The Game!", "success");
-        }
+        play() 
     }
 }
 

@@ -4,9 +4,6 @@ html {
     font-family: 'Montserrat', sans-serif;
     height: 100vh
 }
-/* * {
-    border: 1px solid black
-} */
 
 .main-container {
     background-color: white;
@@ -17,6 +14,7 @@ html {
     border: 3px solid black;
     box-shadow: 7px 15px;
 }
+
 .nav {
     box-sizing: border-box;
     border-bottom: 3px solid black;
@@ -44,14 +42,15 @@ button {
     background-color: white;
     box-shadow: 5px 3px;
     padding: 10px 45px 10px 45px;
-    margin-left: 255px;
     text-align: center;
     font-size: 25px;
+    margin: 0 auto;
+    margin-bottom: 4%;
 }
 
 input {
     width: 100%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     padding: 10%;
     font-size: 20px;
     border-radius: 7px;
@@ -66,21 +65,22 @@ input {
 }
 
 .feeback {
-    display: inline-block;
-    width: 100%;
+    width: 100%; 
+}
+p {
+    max-width: none;
 }
 
-/* #guessCountMess {
+#guessCounter {
+    max-width: none;
+    display: inline-block;
     text-align: left;
-    width: 45%;
-    display: inline-block;
 }
 
-#guessedNumMess {
-    text-align: right;
-    width: 45%;
+#matchCounter {
+    max-width: none;
     display: inline-block;
-} */
+}
 
 .swal-button {
     padding: 7px 30px;
