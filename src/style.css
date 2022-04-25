@@ -67,19 +67,21 @@ input {
 .feeback {
     width: 100%; 
 }
+
 p {
     max-width: none;
 }
 
 #guessCounter {
-    max-width: none;
     display: inline-block;
-    text-align: left;
+    text-align: start;
+    width: 45%;
 }
 
 #matchCounter {
-    max-width: none;
     display: inline-block;
+    text-align: end;
+    width: 45%;
 }
 
 .swal-button {
